@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Прямокутник</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Розрахувати площу прямокутника</h1>
+	<form  name="frm" class="frm">
+		<p>Введіть довжину прямокутника:<input name="a1" required></p>
+		<p>Введіть ширину прямокутника:<input name="b1" required></p>
+		<p>Формула: <output id="formulasquare"></output></p>
+		<p>Відповідь: <output id="answersquare"></output></p>
+		<button type="button" onclick="area();">Обчислити</button>
+		<button type="button" onclick="roundd();">Округлити до цілого</button>
+		
+	</form>
+<script type="text/javascript">
+		function area(){
+			var a=document.frm.a1.value;
+			var b=document.frm.b1.value;
+			var s=a*b;
+			document.frm.formulasquare.value='S=a*b';
+			document.frm.answersquare.value=s;
+		}
+		function roundd(){
+    var a=document.frm.a1.value;
+	var b=document.frm.b1.value;
+	var s=a*b;
+    var s1=Math.round(s);
+    document.frm.formulasquare.value='S=a*b';
+    document.frm.answersquare.value = s1;
+   }
+	</script>
+</body>
+</html>

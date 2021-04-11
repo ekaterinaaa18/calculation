@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Квадрат</title>
+ <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    </style>
+</head>
+<body>
+ <h1>Розрахувати площу квадрата</h1>
+ <form name="frm" class="frm">
+        <p>Введіть сторону квадрата: <input id="areasquare" name="side" required></p>
+        <br>
+        <p>Формула: <output id="formulasquare"></output></p>
+        <p>Відповідь: <output id="answersquare"></output></p>
+        <br>
+  <button type="button" onclick="area();">Обчислити</button>
+  <button type="button" onclick="roundd();">Округлити до цілого</button>
+ </form>
+ <script>
+   function area(){
+    var a=document.frm.side.value;
+    var s=a*a;
+    document.frm.formulasquare.value='S=a^2';
+   document.frm.answersquare.value = s;
+   }
+   function roundd(){
+    var a=document.frm.side.value;
+    var s=a*a;
+    var s1=Math.round(s);
+    document.frm.formulasquare.value='S=a^2';
+    document.frm.answersquare.value = s1;
+   }
+ </script>
+</body>
+</html>

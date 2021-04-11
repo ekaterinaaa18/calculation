@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Паралелограм</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Розрахувати площу паралелограма</h1>
+	<form  name="frm" class="frm">
+		<p>Введіть сторону паралелограма:<input name="a1" required></p>
+		<p>Введіть висоту паралелограма:<input name="h1" required></p>
+		<p>Формула: <output id="formulasquare"></output></p>
+		<p>Відповідь: <output id="answersquare"></output></p>
+		<button type="button" onclick="area();">Обчислити</button>
+		<button type="button" onclick="roundd();">Округлити до цілого</button>
+		
+	</form>
+<script type="text/javascript">
+		function area(){
+			var a=document.frm.a1.value;
+			var h=document.frm.h1.value;
+			var s=a*h;
+			document.frm.formulasquare.value='S=a*h';
+			document.frm.answersquare.value=s;
+		}
+		function roundd(){
+			var a=document.frm.a1.value;
+			var h=document.frm.h1.value;
+			var s=a*h;
+			var s1=Math.round(s);
+			document.frm.formulasquare.value='S=a*h';
+			document.frm.answersquare.value=s1;
+		}
+	</script>
+</body>
+</html>

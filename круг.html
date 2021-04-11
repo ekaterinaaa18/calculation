@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Круг</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<style type="text/css">
+	
+</style>
+<body>
+	<h1>Розрахувати площу круга</h1>
+	<form name="frm" class="frm">
+		<p>Введіть радіус круга R<input name="r1" required></p>
+		<p>Формула: <output id="formulasquare"></output></p>
+		<p>Відповідь: <output id="answersquare"></output></p>
+		<button type="button" onclick="area();">Обчислити</button>
+		<button type="button" onclick="roundd();">Округлити до цілого</button>
+		
+	</form>
+<script type="text/javascript">
+		function area(){
+			var r=document.frm.r1.value;
+			var s=(r*r)*3.14;
+			document.frm.formulasquare.value='S=pi*R^2';
+			document.frm.answersquare.value=s;
+		}
+		function roundd(){
+			var r=document.frm.r1.value;
+			var s=(r*r)*3.14;
+			var s1=Math.round(s);
+			document.frm.formulasquare.value='S=pi*R^2';
+			document.frm.answersquare.value=s1;
+		}
+	</script>
+</body>
+</html>

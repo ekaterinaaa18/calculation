@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Формула Герона</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<style type="text/css">
+	
+</style>
+<body>
+	<h1>Розрахувати площу трикутника за формулою Герона</h1>
+	<form name="frm" class="frm">
+		<p>Введіть сторону a трикутника<input name="a1" required></p>
+		<p>Введіть сторону b трикутника<input name="b1" required></p>
+		<p>Введіть сторону с трикутника:<input name="c1" required></p>
+		<p>Формула: <output id="formulasquare"></output></p>
+		<p>Відповідь: <output id="answersquare"></output></p>
+		<button type="button" onclick="area();">Обчислити</button>
+		<button type="button" onclick="roundd();">Округлити до цілого</button>
+		
+	</form>
+<script type="text/javascript">
+		function area(){
+			var a=document.frm.a1.value;
+			var b=document.frm.b1.value;
+			var c=document.frm.c1.value;
+			var p1=Number(a)+Number(b)+Number(c);
+			var p=p1/2;
+			var m=p-a;
+			var n=p-b;
+			var k=p-c;
+			var s=p*n*m*k;
+			var s1=Math.sqrt(s);
+			document.frm.formulasquare.value='S=(p*(p-a)*(p-b)*(p-c))^0.5';
+			document.frm.answersquare.value=s1;
+		}
+		function roundd(){
+			var a=document.frm.a1.value;
+			var b=document.frm.b1.value;
+			var c=document.frm.c1.value;
+			var p1=Number(a)+Number(b)+Number(c);
+			var p=p1/2;
+			var m=p-a;
+			var n=p-b;
+			var k=p-c;
+			var s=p*n*m*k;
+			var s1=Math.sqrt(s);
+			var s2=Math.round(s1);
+			document.frm.formulasquare.value='S=(p*(p-a)*(p-b)*(p-c))^0.5';
+			document.frm.answersquare.value=s2;
+		}
+	</script>
+</body>
+</html>
